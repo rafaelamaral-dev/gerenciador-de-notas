@@ -1,0 +1,116 @@
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Verde */
+    margin-bottom: 25px;
+}
+
+/* Área de Input */
+.input-area {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+#note-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#add-note-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-note-btn:hover {
+    background-color: #45a049;
+}
+
+/* Contêiner das Notas */
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo da Nota Individual */
+.note-card {
+    background-color: #fff9c4; /* Amarelo pálido */
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    min-height: 100px;
+    text-align: left;
+    white-space: pre-wrap; /* Preserva quebras de linha */
+}
+
+.note-text {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding-bottom: 25px; /* Espaço para o botão de deletar */
+}
+
+.delete-note-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #ff5757; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    transition: background-color 0.2s;
+}
+
+.delete-note-btn:hover {
+    background: #e60000;
+}
+
+.info-text {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
